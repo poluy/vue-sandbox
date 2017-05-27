@@ -2,7 +2,27 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <h2>Essential Links</h2>
-
+  <v-chip>Example Chip</v-chip>
+  <div class="text-xs-center">
+          <v-chip close>
+            <v-avatar>
+              <img src="https://randomuser.me/api/portraits/men/35.jpg" alt="trevor">
+            </v-avatar>
+            Trevor Hansen
+          </v-chip>
+        </div>
+          <div class="text-xs-center">
+    <v-menu offset-y>
+      <v-btn primary light slot="activator">Dropdown</v-btn>
+      <v-list>
+        <v-list-item v-for="item in items" :key="item">
+          <v-list-tile>
+            <v-list-tile-title>{{ item.title }}</v-list-tile-title>
+          </v-list-tile>
+        </v-list-item>
+      </v-list>
+    </v-menu>
+  </div>
   </div>
 </template>
 
@@ -11,7 +31,12 @@ export default {
   name: 'hello',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Welcome to Your Vue.js App',
+      items: [
+        { title: 'some text' },
+        { title: 'some text 2' },
+        { title: 'some text 3' }
+      ]
     }
   }
 }

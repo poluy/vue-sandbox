@@ -18,7 +18,7 @@
         {{item.id}} - {{item.text}}
       </li>      
     </ul>
-
+    <v-btn dark flat class="btn--dark-flat-focused">Focusedss</v-btn>
   </div>
 </template>
 
