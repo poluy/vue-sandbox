@@ -4,7 +4,7 @@
     <h2>Essential Links</h2>
   <v-chip>Example Chip</v-chip>
   <div class="text-xs-center">
-          <v-chip close>
+          <v-chip info>
             <v-avatar>
               <img src="https://randomuser.me/api/portraits/men/35.jpg" alt="trevor">
             </v-avatar>
@@ -18,11 +18,16 @@
         <v-list-item v-for="item in items" :key="item">
           <v-list-tile>
             <v-list-tile-title>{{ item.title }}</v-list-tile-title>
+            <v-icon right>star</v-icon>
           </v-list-tile>
         </v-list-item>
       </v-list>
     </v-menu>
   </div>
+    <v-btn close class="red white--text">Decline 12 3
+      <v-icon light right>block</v-icon>
+      <v-icon light right>star</v-icon>
+    </v-btn>    
   </div>
 </template>
 
